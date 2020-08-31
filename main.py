@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def getall():
+def getall(self):
     # if __name__ == '__main__':
     # Variables & Setup
     client = FaunaClient(secret="fnAD0lh0uaACAIcRCRWTWllmNND-WpAZwgEicUVk")
