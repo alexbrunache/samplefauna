@@ -4,12 +4,12 @@ import json
 from faunadb import query as q
 from faunadb.objects import Ref
 from faunadb.client import FaunaClient
-from flask import Flask
 
-app = Flask(__name__)
+#from flask import Flask
+#app = Flask(__name__)
+#@app.route('/')
 
 
-@app.route('/')
 def getall(self):
     # if __name__ == '__main__':
     # Variables & Setup
