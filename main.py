@@ -1,4 +1,4 @@
-from fauna import getfam
+from src.fauna import getfam
 
 
 # (users/getall) [GET]
