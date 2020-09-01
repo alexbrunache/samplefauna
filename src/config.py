@@ -24,4 +24,4 @@ def getGCPSecret():
 
 
 # client = FaunaClient(secret=getSecret())
-client = FaunaClient(secret=geGCPSecret())
+client = FaunaClient(secret=getGCPSecret())
