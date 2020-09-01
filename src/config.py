@@ -23,7 +23,7 @@ def getSecret():
 def getGCPSecret():
     google_client = secretmanager.SecretManagerServiceClient()
     secret_name = "API_SECRET"
-    project_id = os.getencv("testfaunaserverless")
+    project_id = os.getenv("testfaunaserverless")
     resource_name = f"projects/{project_id}/secrets/{secret_name}/versions/latest"
     response = google_client.access_secret_version(resource_name)
     return response.payload.data.decode('UTF-8')
