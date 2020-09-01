@@ -23,6 +23,7 @@ def getSecret():
 def getGCPSecret():
     google_client = secretmanager.SecretManagerServiceClient()
     name = google_client.secret_version_path("testfaunaserverless", "API_SECRET", "latest")
+    response = client.access_secret_version(name)
     return response.payload.data.decode('UTF-8')
 
 
