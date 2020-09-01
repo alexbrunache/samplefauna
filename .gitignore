@@ -1,5 +1,16 @@
+# IDE related environment variables
 .idea
+.vscode
+
+# Runtime generated files
 __pycache__/
 .pyc
+
+# Dependency files
 venv/
+
+# Environment Variables
 .env
+
+# Apple Environment Variables
+.DS_Store
