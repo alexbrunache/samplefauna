@@ -3,7 +3,7 @@ import re
 import json
 from faunadb import query as q
 from faunadb.objects import Ref
-from config import client
+from src.config import client
 
 
 def getfam():
