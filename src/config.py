@@ -23,4 +23,5 @@ def getGCPSecret():
     return os.getenv('API_SECRET')
 
 
-client = FaunaClient(secret=getSecret())
+# client = FaunaClient(secret=getSecret())
+client = FaunaClient(secret=geGCPSecret())
