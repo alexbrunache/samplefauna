@@ -1,3 +1,4 @@
 faunadb
 python-dotenv
 pathlib
+google-cloud-secret-manager
