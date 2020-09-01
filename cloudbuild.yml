@@ -1,3 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'getall', '[YOUR_FUNCTION_TRIGGER]', '--runtime', '[YOUR_RUNTIME]', '--entry-point', '[YOUR_FUNCTION_NAME_IN_CODE]']
