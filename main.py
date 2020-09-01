@@ -4,13 +4,15 @@ import json
 from faunadb import query as q
 from faunadb.objects import Ref
 from faunadb.client import FaunaClient
-from config import getSecret
+# from config import getSecret
+from config import getGCPSecret
 
 
 def getall(self):
     # Variables & Setup
     print(getSecret())
-    client = FaunaClient(secret=getSecret())
+    client = FaunaClient(secret=getGCPSecret())
+    # client = FaunaClient(secret=getSecret())
     c = client.query(
         q.paginate(
             q.match(q.index('allFam')))

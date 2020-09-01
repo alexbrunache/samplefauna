@@ -16,3 +16,7 @@ def getSecret():
     secret = os.getenv('API_SECRET')
     print(secret)
     return secret
+
+
+def getGCPSecret():
+    return os.getenv('API_SECRET')
