@@ -3,8 +3,8 @@ steps:
   entrypoint: /bin/sh
   # Run pip install and pytest in the same build step
   # (pip packages won't be preserved in future steps!)
-  args: [-c, 'pip install -r requirements.txt', '&&', 'pytest']
+  args: [-c, 'pip3 install -r requirements.txt', '&&', 'pytest']
   dir: 'function/dir/from/repo/root'
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'getall', '--trigger-http', '--runtime', 'python37', 'getall']
-  dir: 'function/dir/from/repo/root'
+  args: ['functions', 'deploy', 'getall', '--trigger-http', 'python37', '--entry-point', 'getall']
+  dir: 'source.cloud.google.com/testfaunaseverless/github_alexbrunache_samplefauna/+/master:'
