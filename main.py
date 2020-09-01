@@ -10,7 +10,6 @@ from config import getGCPSecret
 
 def getall(self):
     # Variables & Setup
-    print(getSecret())
     client = FaunaClient(secret=getGCPSecret())
     # client = FaunaClient(secret=getSecret())
     c = client.query(
