@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+from faunadb.client import FaunaClient
 
 
 def getSecret():
@@ -20,3 +21,6 @@ def getSecret():
 
 def getGCPSecret():
     return os.getenv('API_SECRET')
+
+
+client = FaunaClient(secret=getSecret())
