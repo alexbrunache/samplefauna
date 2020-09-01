@@ -7,11 +7,14 @@ from faunadb.client import FaunaClient
 # from config import getSecret
 from config import getGCPSecret
 
+# Variables & Setup
+client = FaunaClient(secret=getGCPSecret())
+# client = FaunaClient(secret=getSecret())
 
+
+# if __name__ == '__main__':
 def getall(self):
-    # Variables & Setup
-    client = FaunaClient(secret=getGCPSecret())
-    # client = FaunaClient(secret=getSecret())
+
     c = client.query(
         q.paginate(
             q.match(q.index('allFam')))
@@ -22,3 +25,5 @@ def getall(self):
     result = re.findall(pattern, string)
 
     return "First Name: " + str([client.query(q.get(q.ref(q.collection('person'), result[0])))['data']][0].get("firstName"))
+    # print("First Name: " + str([client.query(q.get(q.ref(q.collection('person'), result[0])))['data']][0].get(
+    # "firstName"))) 
