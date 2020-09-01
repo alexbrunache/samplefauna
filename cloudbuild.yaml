@@ -3,8 +3,8 @@ steps:
   entrypoint: /bin/sh
   # Run pip install and pytest in the same build step
   # (pip packages won't be preserved in future steps!)
-  args: [-c, 'pip3 install -r master/requirements.txt', '&&', 'pytest']
-  dir: 'function/dir/from/repo/root/'
+  args: [-c, 'pip3 install -r requirements.txt', '&&', 'pytest']
+  dir: 'function/dir/from/repo/root/master'
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['functions', 'deploy', 'getall', '--trigger-http', '--runtime', 'python37', 'getall']
-  dir: 'function/dir/from/repo/root/'
+  dir: 'function/dir/from/repo/root/master'
