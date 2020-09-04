@@ -3,7 +3,7 @@ import re
 import json
 from faunadb import query as q
 from faunadb.objects import Ref
-from config import client
+from src.config import client
 
 
 def getfam():
@@ -18,7 +18,3 @@ def getfam():
 
     return "Person Last Name: " + str(
         [client.query(q.get(q.ref(q.collection('person'), result[0])))['data']][0].get("lastName"))
-
-
-if __name__ == '__main__':
-    print(getfam())
