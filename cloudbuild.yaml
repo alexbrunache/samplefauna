@@ -7,7 +7,7 @@ steps:
   dir: 'function/dir/from/repo/root'
 - name: 'python:3.7'
   entrypoint: bash
-  args: [-c, 'pip3 freeze > requirements.txt']
+  args: [-c, 'pip3 install -r requirements.txt']
   dir: 'function/dir/from/repo/root'
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['functions', 'deploy', 'getall', '--trigger-http', 'python37', '--entry-point', 'getall']
