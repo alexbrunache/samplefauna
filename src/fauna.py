@@ -16,7 +16,7 @@ def getfam():
     pattern = '\d+'
     result = re.findall(pattern, string)
 
-    return "Person Name: " + str(
+    return "Person Last Name: " + str(
         [client.query(q.get(q.ref(q.collection('person'), result[0])))['data']][0].get("lastName"))
 
 
