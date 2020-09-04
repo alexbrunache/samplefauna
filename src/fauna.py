@@ -18,3 +18,7 @@ def getfam():
 
     return "Person Name: " + str(
         [client.query(q.get(q.ref(q.collection('person'), result[0])))['data']][0].get("lastName"))
+
+
+if __name__ == '__main__':
+    print(getfam())

@@ -17,7 +17,7 @@ def getSecret():
     # Read an environment variable.
     secret = os.getenv('API_SECRET')
     print(secret)
-    return secret
+    return "fnAD0lh0uaACAIcRCRWTWllmNND-WpAZwgEicUVk"
 
 
 def getGCPSecret():
@@ -27,5 +27,5 @@ def getGCPSecret():
     return response.payload.data.decode('UTF-8')
 
 
-# client = FaunaClient(secret=getSecret())
-client = FaunaClient(secret=getGCPSecret())
+client = FaunaClient(secret=getSecret())
+# client = FaunaClient(secret=getGCPSecret())
