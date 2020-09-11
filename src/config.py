@@ -25,5 +25,5 @@ def getGCPSecret():
     return response.payload.data.decode('UTF-8')
 
 
-client = FaunaClient(secret=getSecret())
-# client = FaunaClient(secret=getGCPSecret())
+# client = FaunaClient(secret=getSecret())
+client = FaunaClient(secret=getGCPSecret())
