@@ -1,5 +1,4 @@
-from src.fauna import getfam
-from src.fauna import getfamlastname
+from src.fauna import getfam, getfamlastname
 
 
 def getall(self):
