@@ -1,4 +1,4 @@
-from src.fauna import getfam
+import src.fauna
 
 
 def getall(self):
