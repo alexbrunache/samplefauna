@@ -30,5 +30,5 @@ def getfamlastname():
     pattern = '\d+'
     result = re.findall(pattern, string)
 
-    return "Person's Last Name: " + str(
+    return "Last Name: " + str(
         [client.query(q.get(q.ref(q.collection('person'), result[0])))['data']][0].get("lastName"))
